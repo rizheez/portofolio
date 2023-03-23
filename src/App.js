@@ -25,25 +25,25 @@ function App() {
             <div className="flex items-center">
               <Link
                 to="/"
-                className={ `${ location.pathname === '/' ? 'inline-block border underline border-blue-500 rounded py-1 px-3 bg-blue-500 text-white' : 'text-gray-800 text-sm font-semibold hover:text-gray-900 mx-3' }` }
+                className={ `${ location.pathname === '/portofolio' ? 'inline-block border underline border-blue-500 rounded py-1 px-3 bg-blue-500 text-white' : 'text-gray-800 text-sm font-semibold hover:text-gray-900 mx-3' }` }
               >
                 Home
               </Link>
               <Link
                 to="/about"
-                className={ ` ${ location.pathname === '/about' ? 'inline-block border underline border-blue-500 rounded py-1 px-3 bg-blue-500 text-white' : 'text-gray-800 text-sm font-semibold hover:text-gray-900 mx-3' }` }
+                className={ ` ${ location.pathname === '/portofolio/about' ? 'inline-block border underline border-blue-500 rounded py-1 px-3 bg-blue-500 text-white' : 'text-gray-800 text-sm font-semibold hover:text-gray-900 mx-3' }` }
               >
                 About
               </Link>
               <Link
                 to="/project"
-                className={ ` ${ location.pathname === '/project' ? 'inline-block border underline border-blue-500 rounded py-1 px-3 bg-blue-500 text-white' : 'text-gray-800 text-sm font-semibold hover:text-gray-900 mx-3' }` }
+                className={ ` ${ location.pathname === '/portofolio/project' ? 'inline-block border underline border-blue-500 rounded py-1 px-3 bg-blue-500 text-white' : 'text-gray-800 text-sm font-semibold hover:text-gray-900 mx-3' }` }
               >
                 Projects
               </Link>
               <Link
                 to="/contact"
-                className={ ` ${ location.pathname === '/contact' ? 'inline-block border underline border-blue-500 rounded py-1 px-3 bg-blue-500 text-white' : 'text-gray-800 text-sm font-semibold hover:text-gray-900 mx-3' }` }
+                className={ ` ${ location.pathname === '/portofolio/contact' ? 'inline-block border underline border-blue-500 rounded py-1 px-3 bg-blue-500 text-white' : 'text-gray-800 text-sm font-semibold hover:text-gray-900 mx-3' }` }
               >
                 Contact
               </Link>
@@ -59,10 +59,10 @@ function App() {
         <Navbar />
 
         <Routes>
-          <Route path="/about" element={ <About /> } />
-          <Route path="/project" element={ <Project /> } />
-          <Route path="/contact" element={ <Contact /> } />
-          <Route path="/" element={ <Home /> } />
+          <Route path="/portofolio/about" element={ <About /> } />
+          <Route path="/portofolio/project" element={ <Project /> } />
+          <Route path="/portofolio/contact" element={ <Contact /> } />
+          <Route path="/portofolio" element={ <Home /> } />
         </Routes>
       </div>
     </Router>
