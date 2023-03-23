@@ -24,25 +24,25 @@ function App() {
             </div>
             <div className="flex items-center">
               <Link
-                to="/"
+                to="/portofolio"
                 className={ `${ location.pathname === '/portofolio' ? 'inline-block border underline border-blue-500 rounded py-1 px-3 bg-blue-500 text-white' : 'text-gray-800 text-sm font-semibold hover:text-gray-900 mx-3' }` }
               >
                 Home
               </Link>
               <Link
-                to="/about"
+                to="/portofolio/about"
                 className={ ` ${ location.pathname === '/portofolio/about' ? 'inline-block border underline border-blue-500 rounded py-1 px-3 bg-blue-500 text-white' : 'text-gray-800 text-sm font-semibold hover:text-gray-900 mx-3' }` }
               >
                 About
               </Link>
               <Link
-                to="/project"
+                to="/portofolio/project"
                 className={ ` ${ location.pathname === '/portofolio/project' ? 'inline-block border underline border-blue-500 rounded py-1 px-3 bg-blue-500 text-white' : 'text-gray-800 text-sm font-semibold hover:text-gray-900 mx-3' }` }
               >
                 Projects
               </Link>
               <Link
-                to="/contact"
+                to="/portofolio/contact"
                 className={ ` ${ location.pathname === '/portofolio/contact' ? 'inline-block border underline border-blue-500 rounded py-1 px-3 bg-blue-500 text-white' : 'text-gray-800 text-sm font-semibold hover:text-gray-900 mx-3' }` }
               >
                 Contact
