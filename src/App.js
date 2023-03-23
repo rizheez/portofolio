@@ -25,7 +25,7 @@ function App() {
             <div className="flex items-center">
               <Link
                 to="/portofolio"
-                className={ `${ location.pathname === '/portofolio' ? 'inline-block border underline border-blue-500 rounded py-1 px-3 bg-blue-500 text-white' : 'text-gray-800 text-sm font-semibold hover:text-gray-900 mx-3' }` }
+                className={ `${ location.pathname === '/portofolio' || location.pathname === '/portofolio/' ? 'inline-block border underline border-blue-500 rounded py-1 px-3 bg-blue-500 text-white' : 'text-gray-800 text-sm font-semibold hover:text-gray-900 mx-3' }` }
               >
                 Home
               </Link>
