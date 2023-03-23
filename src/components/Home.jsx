@@ -14,7 +14,7 @@ function Home() {
                 </div>
                 <div className="flex justify-center mb-4">
                     <a
-                        href="https://www.linkedin.com/in/muhammad-reza-saputra"
+                        href="https://www.linkedin.com/in/muhammad-reza-saputra-b6a81726b"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="mr-4"
@@ -22,7 +22,7 @@ function Home() {
                         <FaLinkedin size={ 32 } />
                     </a>
                     <a
-                        href="https://www.facebook.com/mreza.saputra"
+                        href="https://www.facebook.com/zeinatsu/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="mr-4"
@@ -30,7 +30,7 @@ function Home() {
                         <FaFacebook size={ 32 } />
                     </a>
                     <a
-                        href="https://github.com/mreza0106"
+                        href="https://github.com/rizheez"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="mr-4"
