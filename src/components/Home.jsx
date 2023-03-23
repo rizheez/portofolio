@@ -9,7 +9,7 @@ function Home() {
             <div className=" text-white" data-aos="zoom-out" data-aos-delay="250">
                 <div className="flex flex-col content-center items-center">
                     <img className="w-52" src={ ava } alt="avatar" />
-                    <h1 className="text-4xl font-bold mb-4">Muhammad Reza Saputra</h1>
+                    <h1 className="text-4xl font-bold mb-4 text-center pt-5">Muhammad Reza Saputra</h1>
                     <p className="text-lg mb-4">I'm Laravel Developer</p>
                 </div>
                 <div className="flex justify-center mb-4">
