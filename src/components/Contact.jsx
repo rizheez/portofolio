@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaLinkedin } from "react-icons/fa";
 function Contact() {
     return (
         <div className="min-h-screen bg-gradient-to-r from-blue-400 to-purple-500">
