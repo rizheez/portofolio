@@ -14,12 +14,12 @@ function Contact() {
                         </div>
                         <div className="bg-white rounded-lg shadow-lg p-6">
                             <h2 className="text-2xl font-bold mb-2">Social Media</h2>
-                            <div className="flex flex-nowrap mb-4">
+                            <div className=" rounded-lg flex flex-nowrap mb-4">
                                 <a
                                     href="https://www.linkedin.com/in/muhammad-reza-saputra-b6a81726b"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="mr-4"
+                                    className="mr-4 transition ease-in-out delay-150 hover:scale-125 duration-100"
                                 >
                                     <FaLinkedin size={ 32 } />
                                 </a>
@@ -27,18 +27,11 @@ function Contact() {
                                     href="https://www.facebook.com/zeinatsu/"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="mr-4"
+                                    className="mr-4 transition ease-in-out delay-150 hover:scale-125 duration-100"
                                 >
                                     <FaFacebook size={ 32 } />
                                 </a>
-                                <a
-                                    href="https://github.com/rizheez"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="mr-4"
-                                >
-                                    <FaGithub size={ 32 } />
-                                </a>
+
                             </div>
                         </div>
                     </div>
