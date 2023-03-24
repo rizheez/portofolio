@@ -1,63 +1,106 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import { RxHamburgerMenu } from 'react-icons/rx';
+import { RiCloseLine } from 'react-icons/ri';
+import { Link, useLocation } from 'react-router-dom';
 
-function Navbar() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+const Navbar = () => {
+    const location = useLocation();
 
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
-    };
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => setIsOpen(!isOpen);
 
     return (
-        <nav className="bg-white shadow">
-            <div className="container mx-auto px-6 py-4 md:flex md:justify-between md:items-center">
-                <div className="flex items-center justify-between">
+        <nav className="bg-white shadow uppercase sticky top-0 z-50 ">
+            <div className="container px-6 py-4">
+                <div className="flex  justify-between">
+
                     <div className="text-xl font-bold text-gray-800">
                         My Portfolio
                     </div>
-                    <button
-                        className="md:hidden rounded-lg focus:outline-none focus:shadow-outline-purple"
-                        aria-label="Toggle menu"
-                        onClick={ toggleMenu }
-                    >
-                        <svg viewBox="0 0 24 24" className="h-6 w-6 fill-current">
-                            <path
-                                fillRule="evenodd"
-                                d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"
-                            ></path>
-                        </svg>
-                    </button>
+
+                    <div className="hidden md:block absolute right-20">
+
+                        <ul className="flex">
+                            <li className='mr-6'>
+                                <Link
+                                    to="/portofolio"
+                                    className={ `${ location.pathname === '/portofolio' || location.pathname === '/portofolio/' ? 'text-md rounded underline py-1 px-3 bg-blue-500 text-white' : 'text-gray-800 text-md font-semibold hover:text-gray-900 py-1 px-3' }` }
+                                >
+                                    Home
+                                </Link>
+                            </li>
+                            <li className='mr-6'>
+                                <Link
+                                    to="/portofolio/about"
+                                    className={ ` ${ location.pathname === '/portofolio/about' ? 'text-md rounded py-1 px-3 bg-blue-500 underline text-white' : 'text-gray-800 text-md font-semibold hover:text-gray-900 py-1 px-3' }` }
+                                >
+                                    About
+                                </Link>
+                            </li>
+                            <li className='mr-6'>
+                                <Link
+                                    to="/portofolio/project"
+                                    className={ ` ${ location.pathname === '/portofolio/project' ? 'text-md rounded py-1 px-3 bg-blue-500 underline text-white' : 'text-gray-800 text-md font-semibold hover:text-gray-900 py-1 px-3' }` }
+                                >
+                                    Projects
+                                </Link>
+                            </li>
+                            <li className='mr-6'>
+                                <Link
+                                    to="/portofolio/contact"
+                                    className={ ` ${ location.pathname === '/portofolio/contact' ? 'text-md rounded py-1 px-3 bg-blue-500 underline text-white' : 'text-gray-800 text-md font-semibold hover:text-gray-900 py-1 px-3' }` }
+                                >
+                                    Contact
+                                </Link>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    {/* Hamburger button */ }
+                    <div className="md:hidden ">
+                        <button onClick={ toggleMenu } className="text-gray-800 hover:text-gray-900 focus:outline-none focus:text-gray-900">
+                            { isOpen ? (
+                                <RiCloseLine size={ 30 } />
+                            ) : (
+                                <RxHamburgerMenu size={ 25 } />
+                            ) }
+                        </button>
+                    </div>
                 </div>
-                <div
-                    className={ `${ isMenuOpen ? "block" : "hidden"
-                        } md:flex items-center justify-between` }
-                >
-                    <div className="flex flex-col md:flex-row md:mx-6">
-                        <a
-                            className="text-gray-800 text-sm font-semibold hover:text-gray-900 mx-3 block md:inline-block mt-4 md:mt-0"
-                            href="#about"
-                            onClick={ toggleMenu }
+
+                <div className={ `md:hidden ${ isOpen ? 'block' : 'hidden' }` }>
+                    <div className="pt-2 pb-3 text-md flex flex-col">
+                        <Link
+                            to="/portofolio"
+                            className={ `${ location.pathname === '/portofolio' || location.pathname === '/portofolio/' ? ' border underline text-sm border-blue-500 rounded py-1 px-3  bg-blue-500 text-white' : 'text-gray-800 text-sm font-semibold hover:text-gray-900 py-1 px-3 ' }` }
+                        >
+                            Home
+                        </Link>
+                        <Link
+                            to="/portofolio/about"
+                            className={ ` ${ location.pathname === '/portofolio/about' ? ' border underline text-sm border-blue-500 rounded py-1 px-3 bg-blue-500 text-white' : 'text-gray-800 text-sm font-semibold hover:text-gray-900 py-1 px-3 ' }` }
                         >
                             About
-                        </a>
-                        <a
-                            className="text-gray-800 text-sm font-semibold hover:text-gray-900 mx-3 block md:inline-block mt-4 md:mt-0"
-                            href="#projects"
-                            onClick={ toggleMenu }
+                        </Link>
+                        <Link
+                            to="/portofolio/project"
+                            className={ ` ${ location.pathname === '/portofolio/project' ? ' border underline text-sm border-blue-500 rounded py-1 px-3 bg-blue-500 text-white' : 'text-gray-800 text-sm font-semibold hover:text-gray-900 py-1 px-3 ' }` }
                         >
                             Projects
-                        </a>
-                        <a
-                            className="text-gray-800 text-sm font-semibold hover:text-gray-900 mx-3 block md:inline-block mt-4 md:mt-0"
-                            href="#contact"
-                            onClick={ toggleMenu }
+                        </Link>
+                        <Link
+                            to="/portofolio/contact"
+                            className={ ` ${ location.pathname === '/portofolio/contact' ? ' border underline text-sm border-blue-500 rounded py-1 px-3 bg-blue-500 text-white' : 'text-gray-800 text-sm font-semibold hover:text-gray-900 py-1 px-3 ' }` }
                         >
                             Contact
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>
-        </nav>
-    );
+        </nav >
+    )
 }
 
 export default Navbar;
