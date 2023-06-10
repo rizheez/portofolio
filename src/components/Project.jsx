@@ -1,5 +1,5 @@
 import React from "react";
-import { gaji, porto, perpustakaan } from '../assets/index';
+import { gaji, porto, perpustakaan, penjualan } from '../assets/index';
 import { FaGithub } from "react-icons/fa";
 function Project() {
 
@@ -7,6 +7,8 @@ function Project() {
         { name: 'Data Gaji', image: gaji, desc: 'Menghitung Data Gaji Karyawan Sederhana Menggunakan Framework Laravel', git: 'https://github.com/rizheez/data-gaji-laravel' },
         { name: 'Sistem Informasi Perpustakaan', image: perpustakaan, desc: 'Sistem Informasi Perpustakaan Menggunakan Framework Laravel', git: 'https://github.com/rizheez/perpu' },
         { name: 'My Portfolio', image: porto, desc: 'Portfolio Website Menggunakan Framework react', git: 'https://github.com/rizheez/portofolio' },
+        { name: 'Sistem Informasi Penjualan', image: penjualan, desc: 'Sistem Informasi Penjualan', git: 'https://github.com/rizheez/sistem-penjualan' },
+
     ]
 
     return (

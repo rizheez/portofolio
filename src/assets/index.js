@@ -7,7 +7,7 @@ import ava from './image/ava.png';
 import gaji from './image/gaji.png';
 import perpustakaan from './image/perpustakaan.png';
 import porto from './image/porto.png';
+import penjualan from './image/penjualan.png';
 
 
-
-export { React1, Javascript, FE, BE, AWS, ava, gaji, porto, perpustakaan };
+export { React1, Javascript, FE, BE, AWS, ava, gaji, porto, perpustakaan, penjualan };
